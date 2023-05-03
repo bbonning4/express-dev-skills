@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Dev Skills</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <a href="/">Home</a>
-    <a href="/skills">List of All Skills</a>
-    <h1><%= skill.skill %></h1>
-    <p><%= skill.info %></p>
-  </body>
-</html>
+<%- include('../partials/header') %>
+
+  <p><%= skill.info %></p>
+  <form action="/skills/<%= skill.id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete Skill</button>
+  </form>
+
+<%- include('../partials/footer') %>

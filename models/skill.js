@@ -7,7 +7,9 @@ const skills = [
 
 module.exports = {
     getAll,
-    getOne
+    getOne,
+    create,
+    deleteSkill
 };
 
 function getAll() {
@@ -18,3 +20,19 @@ function getOne(id) {
     id = parseInt(id);
     return skills.find(skill => skill.id === id);
 };
+
+function create(skill) {
+    let skillId = 0;
+    skills.forEach(skill => {
+        skillId = skill.id
+    });
+    skill.id = skillId + 1;
+    skill.info = `I'm proficient in ${skill.skill}`
+    skills.push(skill);
+}
+
+function deleteSkill(id) {
+    id = parseInt(id);
+    const idx = skills.findIndex(skill => skill.id === id);
+    skills.splice(idx, 1);
+}
