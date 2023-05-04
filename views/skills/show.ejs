@@ -1,14 +1,14 @@
 <%- include('../partials/header') %>
 
-  <p><%= skill.info %></p>
-  <div id="delete-edit">
-    <form action="/skills/<%= skill.id %>?_method=DELETE" method="POST">
-      <button type="submit">Delete Skill</button>
-    </form>
-    <form action="/skills/<%= skill.id %>/edit" method="GET">
-      <button type="submit">Edit Skill</button>
-    </form>
-  </div>
+<p><%= skill.info %></p>
+<div id="delete-edit">
+  <form action="/skills/<%= skill.id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete Skill</button>
+  </form>
+  <form action="/skills/<%= skill.id %>/edit" method="GET">
+    <button type="submit">Edit Skill</button>
+  </form>
+</div>
 
 
 <%- include('../partials/footer') %>
