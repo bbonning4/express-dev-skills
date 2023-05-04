@@ -3,6 +3,17 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.skill {
+  list-style: square;
+}
+
+.skill > a {
+  color: black;
+}
+
+.skill > a:link {
+  text-decoration: none;
+}
+.skill > a:hover {
+  text-decoration: underline;
 }

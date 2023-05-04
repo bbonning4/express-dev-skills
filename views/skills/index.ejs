@@ -2,11 +2,13 @@
 
   <ul>
       <% skills.forEach(function(s) { %>
-          <li>
+          <li class="skill">
               <a href="/skills/<%= s.id %>"><%= s.skill %></a>
           </li>
       <% }); %>
   </ul>
-  <a href="/skills/new">Add Skill</a>
+  <form action="/skills/new" method="GET">
+    <button>Add Skill</button>
+  </form>
 
 <%- include('../partials/footer') %>
