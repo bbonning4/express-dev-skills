@@ -9,7 +9,8 @@ module.exports = {
     getAll,
     getOne,
     create,
-    deleteSkill
+    deleteSkill,
+    update
 };
 
 function getAll() {
@@ -35,4 +36,10 @@ function deleteSkill(id) {
     id = parseInt(id);
     const idx = skills.findIndex(skill => skill.id === id);
     skills.splice(idx, 1);
+}
+
+function update(id, updatedSkill) {
+    id = parseInt(id);
+    const skill = skills.find(skill => skill.id === id);
+    Object.assign(skill, updatedSkill);
 }

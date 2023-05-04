@@ -3,6 +3,10 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+#delete-edit > form {
+  display: inline-block;
+}
+
 .skill {
   list-style: square;
 }
